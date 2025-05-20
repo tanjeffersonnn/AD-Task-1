@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>AD Task 1 - Page 2</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="container">
     <h1>Loop Example</h1>
     <ul id="list"></ul>
-    <a href="index.html">Back to Page 1</a>
+    <a href="index.html" id="linkToPage1">Back to Page 1</a>
   </div>
 
   <script>
@@ -18,6 +18,10 @@
       output += "<li>Number " + i + "</li>";
     }
     document.getElementById("list").innerHTML = output;
+
+    document.getElementById("linkToPage1").addEventListener("click", function () {
+      console.log("Clicked link back to page 1");
+    });
   </script>
 </body>
 </html>
