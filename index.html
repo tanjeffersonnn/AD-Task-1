@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Student Grades - Page 1</title>
+<title>Welcome - Student Grades</title>
 <style>
   body {
     font-family: Arial, sans-serif;
@@ -11,93 +11,36 @@
     padding: 20px;
     max-width: 600px;
     margin: auto;
+    text-align: center;
   }
   h1 {
     color: #2c3e50;
   }
-  .grade {
-    background: #e3f2fd;
-    border-left: 6px solid #2196f3;
-    margin-bottom: 15px;
-    padding: 15px;
-    border-radius: 5px;
-  }
-  .status {
-    font-weight: bold;
-    color: #e74c3c;
-  }
-  .status.pass {
-    color: #2ecc71;
-  }
-  a {
-    display: inline-block;
+  p {
+    font-size: 1.2em;
     margin-top: 20px;
-    color: #2196f3;
+  }
+  a.button {
+    display: inline-block;
+    margin-top: 40px;
+    padding: 12px 25px;
+    background-color: #2196f3;
+    color: white;
     text-decoration: none;
     font-weight: bold;
+    border-radius: 5px;
+  }
+  a.button:hover {
+    background-color: #0b7dda;
   }
 </style>
 </head>
 <body>
 
-<h1>Student Grades Overview</h1>
+<h1>Welcome to the Student Grades Portal</h1>
+<p>Click the button below to view the detailed report card.</p>
 
-<div class="grade" id="mathGrade"></div>
-<div class="grade" id="englishGrade"></div>
-<div class="grade" id="scienceGrade"></div>
-
-<div id="overallStatus" class="status"></div>
-
-<a href="report.html">Go to Report Card (Page 2)</a>
-
-<script>
-  // Declarations
-  var math = 85;
-  var english = 74;
-  var science = 90;
-
-  // Conditional - check pass/fail for each subject
-  var mathStatus = "";
-  if (math >= 75) {
-    mathStatus = "Passed";
-  } else {
-    mathStatus = "Failed";
-  }
-
-  var englishStatus = "";
-  if (english >= 75) {
-    englishStatus = "Passed";
-  } else {
-    englishStatus = "Failed";
-  }
-
-  var scienceStatus = "";
-  if (science >= 75) {
-    scienceStatus = "Passed";
-  } else {
-    scienceStatus = "Failed";
-  }
-
-  // Display grades and status
-  document.getElementById("mathGrade").textContent = "Math: " + math + " - " + mathStatus;
-  document.getElementById("englishGrade").textContent = "English: " + english + " - " + englishStatus;
-  document.getElementById("scienceGrade").textContent = "Science: " + science + " - " + scienceStatus;
-
-  // Overall pass if all subjects passed
-  var overallPass = false;
-  if (math >= 75 && english >= 75 && science >= 75) {
-    overallPass = true;
-  }
-
-  // Display overall status with conditional color
-  var overallStatusDiv = document.getElementById("overallStatus");
-  if (overallPass) {
-    overallStatusDiv.textContent = "Overall Status: Passed";
-    overallStatusDiv.classList.add("pass");
-  } else {
-    overallStatusDiv.textContent = "Overall Status: Failed";
-  }
-</script>
+<a href="report.html" class="button">Go to Report Card</a>
 
 </body>
 </html>
