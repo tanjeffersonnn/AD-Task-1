@@ -1,60 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Report Card - Jefferson Tan</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f6ff;
-            padding: 40px;
-            color: #333;
-        }
-        h1, h2 {
-            color: #004aad;
-        }
-        table {
-            width: 60%;
-            border-collapse: collapse;
-            margin-bottom: 30px;
-        }
-        th, td {
-            padding: 12px;
-            border: 1px solid #ccc;
-            text-align: left;
-        }
-        .status {
-            font-size: 20px;
-            font-weight: bold;
-            color: green;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <title>AD Task 1 - Page 1</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <h1>Report Card</h1>
-    <p><strong>Student Name:</strong> Jefferson Tan</p>
+  <div class="container">
+    <h1>Welcome to AD Task 1</h1>
+    <p id="message"></p>
+    <a href="page2.html" id="linkToPage2">Go to Page 2</a>
+  </div>
 
-    <h2>Subjects & Grades</h2>
-    <table>
-        <tr><th>Subject</th><th>Grade</th></tr>
-        <tr><td>Math</td><td>89</td></tr>
-        <tr><td>English</td><td>78</td></tr>
-        <tr><td>Science</td><td>94</td></tr>
-        <tr><td>History</td><td>85</td></tr>
-        <tr><td>PE</td><td>91</td></tr>
-    </table>
+  <script>
+    let greeting = "Hello, student!";
+    let grade = 85;
+    let message = "";
 
-    <p><strong>Average Grade:</strong> 87.4</p>
-    <p class="status">Status: PASSED</p>
+    if (grade >= 75) {
+      message = greeting + " You passed!";
+    } else {
+      message = greeting + " You failed.";
+    }
 
-    <h2>Subject Remarks</h2>
-    <table>
-        <tr><th>Subject</th><th>Remark</th></tr>
-        <tr><td>Math</td><td>Good</td></tr>
-        <tr><td>English</td><td>Average</td></tr>
-        <tr><td>Science</td><td>Excellent</td></tr>
-        <tr><td>History</td><td>Satisfactory</td></tr>
-        <tr><td>PE</td><td>Excellent</td></tr>
-    </table>
+    document.getElementById("message").innerText = message;
+
+    document.getElementById("linkToPage2").addEventListener("click", function (e) {
+      console.log("Clicked link to page 2");
+      console.log("Link href:", this.href);
+        
+    });
+  </script>
 </body>
 </html>
