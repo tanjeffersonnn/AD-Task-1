@@ -1,34 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>AD Task 1 - Page 1</title>
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Student Grades - Page 1</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #f9f9f9;
+    padding: 20px;
+    max-width: 600px;
+    margin: auto;
+  }
+  h1 {
+    color: #2c3e50;
+  }
+  .grade {
+    background: #e3f2fd;
+    border-left: 6px solid #2196f3;
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 5px;
+  }
+  .status {
+    font-weight: bold;
+    color: #e74c3c;
+  }
+  .status.pass {
+    color: #2ecc71;
+  }
+  a {
+    display: inline-block;
+    margin-top: 20px;
+    color: #2196f3;
+    text-decoration: none;
+    font-weight: bold;
+  }
+</style>
 </head>
 <body>
-  <div class="container">
-    <h1>Welcome to AD Task 1</h1>
-    <p id="message"></p>
-    <a href="page2.html" id="linkToPage2">Go to Page 2</a>
-  </div>
 
-  <script>
-    let greeting = "Hello, student!";
-    let grade = 85;
-    let message = "";
+<h1>Student Grades Overview</h1>
 
-    if (grade >= 75) {
-      message = greeting + " Your grade is " + grade + ". You passed!";
-    } else {
-      message = greeting + " Your grade is " + grade + ". You failed.";
-    }
+<div class="grade" id="mathGrade"></div>
+<div class="grade" id="englishGrade"></div>
+<div class="grade" id="scienceGrade"></div>
 
-    document.getElementById("message").innerText = message;
+<div id="overallStatus" class="status"></div>
 
-    document.getElementById("linkToPage2").addEventListener("click", function (e) {
-      console.log("Clicked link to page 2");
-      console.log("Link href:", this.href);
-    });
-  </script>
+<a href="report.html">Go to Report Card (Page 2)</a>
+
+<script>
+  // Declarations
+  var math = 85;
+  var english = 74;
+  var science = 90;
+
+  // Conditional - check pass/fail for each subject
+  var mathStatus = "";
+  if (math >= 75) {
+    mathStatus = "Passed";
+  } else {
+    mathStatus = "Failed";
+  }
+
+  var englishStatus = "";
+  if (english >= 75) {
+    englishStatus = "Passed";
+  } else {
+    englishStatus = "Failed";
+  }
+
+  var scienceStatus = "";
+  if (science >= 75) {
+    scienceStatus = "Passed";
+  } else {
+    scienceStatus = "Failed";
+  }
+
+  // Display grades and status
+  document.getElementById("mathGrade").textContent = "Math: " + math + " - " + mathStatus;
+  document.getElementById("englishGrade").textContent = "English: " + english + " - " + englishStatus;
+  document.getElementById("scienceGrade").textContent = "Science: " + science + " - " + scienceStatus;
+
+  // Overall pass if all subjects passed
+  var overallPass = false;
+  if (math >= 75 && english >= 75 && science >= 75) {
+    overallPass = true;
+  }
+
+  // Display overall status with conditional color
+  var overallStatusDiv = document.getElementById("overallStatus");
+  if (overallPass) {
+    overallStatusDiv.textContent = "Overall Status: Passed";
+    overallStatusDiv.classList.add("pass");
+  } else {
+    overallStatusDiv.textContent = "Overall Status: Failed";
+  }
+</script>
+
 </body>
 </html>
