@@ -1,63 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Programming Basics - Declarations & Conditionals</title>
-  <style>
-    body {
-      background-color: #282c34;
-      color: #61dafb;
-      font-family: Arial, sans-serif;
-      padding: 2rem;
-    }
-    h1, h2 {
-      color: #21a1f1;
-    }
-    .code {
-      background: #20232a;
-      padding: 1rem;
-      border-radius: 8px;
-      font-family: monospace;
-      white-space: pre-wrap;
-    }
-    a {
-      color: #61dafb;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Welcome - Student Grades</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #f9f9f9;
+    padding: 20px;
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+  }
+  h1 {
+    color: #2c3e50;
+  }
+  p {
+    font-size: 1.2em;
+    margin-top: 20px;
+  }
+  a.button {
+    display: inline-block;
+    margin-top: 40px;
+    padding: 12px 25px;
+    background-color: #2196f3;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+  }
+  a.button:hover {
+    background-color: #0b7dda;
+  }
+</style>
 </head>
 <body>
-  <h1>Programming Basics: Declarations & Conditionals</h1>
-  <p>This page demonstrates variables and conditional statements.</p>
 
-  <h2>Variable Declarations:</h2>
-  <div class="code" id="vars"></div>
+<h1>Welcome to the Student Grades Portal</h1>
+<p>Click the button below to view the detailed report card.</p>
 
-  <h2>Conditional Example:</h2>
-  <div class="code" id="conditional"></div>
+<a href="report.html" class="button">Go to Report Card</a>
 
-  <p><a href="loop.html">Go to Looping Example</a></p>
-
-  <script>
-    // Declarations
-    let number = 10;
-    let text = "Hello, GitHub!";
-    let isActive = true;
-
-    document.getElementById('vars').textContent = 
-      `let number = ${number};\nlet text = "${text}";\nlet isActive = ${isActive};`;
-
-    let message;
-    if (number > 5) {
-      message = "Number is greater than 5.";
-    } else {
-      message = "Number is 5 or less.";
-    }
-    document.getElementById('conditional').textContent = 
-      `if (number > 5) {\n  message = "Number is greater than 5.";\n} else {\n  message = "Number is 5 or less.";\n}\n\nResult: ${message}`;
-  </script>
 </body>
 </html>
