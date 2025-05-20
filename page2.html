@@ -1,23 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>AD Task 1 - Page 2</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #9face6 0%, #74ebd5 100%);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+    .container {
+      background-color: rgba(0, 0, 50, 0.6);
+      padding: 30px;
+      border-radius: 15px;
+      width: 400px;
+    }
+    a {
+      color: #fff;
+      text-decoration: underline;
+      display: inline-block;
+      margin-top: 20px;
+    }
+  </style>
 </head>
 <body>
   <div class="container">
-    <h1>Loop Example</h1>
-    <ul id="list"></ul>
-    <a href="index.html">Back to Page 1</a>
+    <h1>Welcome to Page 2</h1>
+    <p>This is the content of the second page.</p>
+    <a href="page1.html">Back to Page 1</a>
   </div>
-
-  <script>
-    let output = "";
-    for (let i = 1; i <= 5; i++) {
-      output += "<li>Number " + i + "</li>";
-    }
-    document.getElementById("list").innerHTML = output;
-  </script>
 </body>
 </html>
