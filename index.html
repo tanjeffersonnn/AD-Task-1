@@ -18,9 +18,9 @@
     let message = "";
 
     if (grade >= 75) {
-      message = greeting + " You passed!";
+      message = greeting + " Your grade is " + grade + ". You passed!";
     } else {
-      message = greeting + " You failed.";
+      message = greeting + " Your grade is " + grade + ". You failed.";
     }
 
     document.getElementById("message").innerText = message;
@@ -28,7 +28,6 @@
     document.getElementById("linkToPage2").addEventListener("click", function (e) {
       console.log("Clicked link to page 2");
       console.log("Link href:", this.href);
-        
     });
   </script>
 </body>
