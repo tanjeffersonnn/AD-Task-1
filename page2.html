@@ -8,20 +8,29 @@
 <body>
   <div class="container">
     <h1>Loop Example</h1>
+    <p id="message"></p> 
     <ul id="list"></ul>
-    <a href="index.html" id="linkToPage1">Back to Page 1</a>
+    <a href="index.html">Back to Page 1</a>
   </div>
 
   <script>
+    let greeting = "Hello, student!";
+    let grade = 85;
+    let message = "";
+
+    if (grade >= 75) {
+      message = greeting + " You passed!";
+    } else {
+      message = greeting + " You failed.";
+    }
+
+    document.getElementById("message").innerText = message;
+
     let output = "";
     for (let i = 1; i <= 5; i++) {
       output += "<li>Number " + i + "</li>";
     }
     document.getElementById("list").innerHTML = output;
-
-    document.getElementById("linkToPage1").addEventListener("click", function () {
-      console.log("Clicked link back to page 1");
-    });
   </script>
 </body>
 </html>
