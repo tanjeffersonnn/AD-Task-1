@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Report Card - Page 2</title>
+<title>Report Card - Student Grades</title>
 <style>
   body {
     font-family: Arial, sans-serif;
@@ -14,6 +14,7 @@
   }
   h1 {
     color: #bf360c;
+    text-align: center;
   }
   table {
     width: 100%;
@@ -28,12 +29,32 @@
   th {
     background-color: #ffcc80;
   }
-  a {
-    display: inline-block;
+  .pass {
+    color: #2ecc71;
+    font-weight: bold;
+  }
+  .fail {
+    color: #e74c3c;
+    font-weight: bold;
+  }
+  #overallStatus {
     margin-top: 20px;
-    color: #bf360c;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+  }
+  a.button {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 10px 20px;
+    background-color: #bf360c;
+    color: white;
     text-decoration: none;
     font-weight: bold;
+    border-radius: 5px;
+  }
+  a.button:hover {
+    background-color: #8c2b00;
   }
 </style>
 </head>
@@ -53,35 +74,56 @@
   </tbody>
 </table>
 
-<a href="index.html">Back to Overview (Page 1)</a>
+<div id="overallStatus"></div>
+
+<a href="index.html" class="button">Back to Welcome</a>
 
 <script>
-  // Declarations
   var subjects = ["Math", "English", "Science"];
   var grades = [85, 74, 90];
   var passingGrade = 75;
 
-  // Looping to create rows dynamically
   var tbody = document.getElementById("reportBody");
-  var i = 0;
-  while (i < subjects.length) {
-    var status = "";
+  var allPassed = true;
+
+  for (var i = 0; i < subjects.length; i++) {
+    var statusText = "";
+    var statusClass = "";
+
     if (grades[i] >= passingGrade) {
-      status = "Passed";
+      statusText = "Passed";
+      statusClass = "pass";
     } else {
-      status = "Failed";
+      statusText = "Failed";
+      statusClass = "fail";
+      allPassed = false;
     }
 
-    // Create row
-    var row = "<tr>" +
-                "<td>" + subjects[i] + "</td>" +
-                "<td>" + grades[i] + "</td>" +
-                "<td>" + status + "</td>" +
-              "</tr>";
+    var row = document.createElement("tr");
 
-    tbody.innerHTML += row;
+    var cellSubject = document.createElement("td");
+    cellSubject.textContent = subjects[i];
+    row.appendChild(cellSubject);
 
-    i++;
+    var cellGrade = document.createElement("td");
+    cellGrade.textContent = grades[i];
+    row.appendChild(cellGrade);
+
+    var cellStatus = document.createElement("td");
+    cellStatus.textContent = statusText;
+    cellStatus.classList.add(statusClass);
+    row.appendChild(cellStatus);
+
+    tbody.appendChild(row);
+  }
+
+  var overallStatusDiv = document.getElementById("overallStatus");
+  if (allPassed) {
+    overallStatusDiv.textContent = "Overall Status: Passed";
+    overallStatusDiv.classList.add("pass");
+  } else {
+    overallStatusDiv.textContent = "Overall Status: Failed";
+    overallStatusDiv.classList.add("fail");
   }
 </script>
 
