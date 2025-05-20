@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Report Card - Page 2</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #fff3e0;
+    padding: 20px;
+    max-width: 600px;
+    margin: auto;
+  }
+  h1 {
+    color: #bf360c;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+  }
+  th, td {
+    border: 1px solid #bf360c;
+    padding: 10px;
+    text-align: center;
+  }
+  th {
+    background-color: #ffcc80;
+  }
+  a {
+    display: inline-block;
+    margin-top: 20px;
+    color: #bf360c;
+    text-decoration: none;
+    font-weight: bold;
+  }
+</style>
+</head>
+<body>
+
+<h1>Student Report Card</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Subject</th>
+      <th>Grade</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody id="reportBody">
+  </tbody>
+</table>
+
+<a href="index.html">Back to Overview (Page 1)</a>
+
+<script>
+  // Declarations
+  var subjects = ["Math", "English", "Science"];
+  var grades = [85, 74, 90];
+  var passingGrade = 75;
+
+  // Looping to create rows dynamically
+  var tbody = document.getElementById("reportBody");
+  var i = 0;
+  while (i < subjects.length) {
+    var status = "";
+    if (grades[i] >= passingGrade) {
+      status = "Passed";
+    } else {
+      status = "Failed";
+    }
+
+    // Create row
+    var row = "<tr>" +
+                "<td>" + subjects[i] + "</td>" +
+                "<td>" + grades[i] + "</td>" +
+                "<td>" + status + "</td>" +
+              "</tr>";
+
+    tbody.innerHTML += row;
+
+    i++;
+  }
+</script>
+
+</body>
+</html>
