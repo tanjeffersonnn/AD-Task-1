@@ -1,45 +1,61 @@
-My To-Do List 
+📋 My To-Do List Application
+My To-Do List Application is a simple PHP-based web application that demonstrates the fundamentals of programming. It includes a landing page and a task demonstration page, showcasing variable declaration, conditional statements, and looping constructs.
 
--is a simple and clean PHP-based web application designed to help users manage their daily tasks efficiently. It features a user-friendly interface where tasks can be added, viewed, and marked as completed.
+📚 Table of Contents
+Overview
+Key Components
+Landing Page
+Task Page
+Fundamentals of Programming
+Variable Declaration
+Conditional Statements
+Looping Statements
+Technologies
+File Structure
+🧾 Overview
+This project is a lightweight PHP application that allows users to view and manage a list of tasks. It is designed to demonstrate basic programming concepts in a web environment using PHP, HTML, CSS, and JavaScript.
 
-🖼️ Interface Overview
+🧩 Key Components
+Landing Page
+Serves as the entry point of the application.
+Uses PHP routing logic to determine which page to load.
+Task Page
+Displays a list of tasks with their completion status.
+Demonstrates dynamic rendering using PHP.
+🧠 Fundamentals of Programming
+Variable Declaration
+Tasks are stored in an array using PHP variables.
+Conditional Statements
+PHP logic checks if tasks exist and whether they are completed.
+Looping Statements
+Loops through the task array to display each task dynamically.
+🛠️ Technologies
+Languages Used:
 
-Header: Displays the title "My To-Do List" prominently.
-
-Task Input: Users can add new tasks using the input field and the Add Task button.
-
-Task List:
-
-Tasks are displayed in a list format.
-
-Completed tasks appear grayed out for visual distinction.
-
-Example tasks include:
-
-Review midterm for Networking course
-
-Code AD-Task-2 project (PHP application)
-
-Troubleshoot Wi-Fi connectivity issues ✅
-
-
-✅ Features
-
-Add new tasks
-
-View existing tasks
-
-Mark tasks as completed
-
-Responsive and clean layout
-
-🛠️ Technologies Used
-
-PHP (backend logic)
-
-HTML/CSS (layout and styling)
-
-JavaScript (optional for dynamic interactions)
-
-
-© 2025 My To-Do List. All rights reserved.
+HTML
+CSS
+JavaScript
+PHP
+📁 File Structure
+My-To-Do-List-Application
+├── assets
+│   ├── css
+│   │   └── main.css
+│   └── js
+│       └── script.js
+├── components
+│   └── templates
+│       └── todo-list.component.php
+├── layout
+│   └── main.layout.php
+├── pages
+│   └── home
+│       └── index.php
+├── staticData
+│   └── todos.staticdata.php
+├── bootstrap.php
+├── router.php
+├── index.php
+├── composer.json
+├── composer.lock
+└── readme.md
