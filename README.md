@@ -45,24 +45,45 @@ Languages Used:
 - PHP
 
 My-To-Do-List-Application
+
 ├── assets
+
 │   ├── css
+
 │   │   └── main.css
+
 │   └── js
+
 │       └── script.js
+
 ├── components
+
 │   └── templates
+
 │       └── todo-list.component.php
+
 ├── layout
+
 │   └── main.layout.php
+
 ├── pages
+
 │   └── home
+
 │       └── index.php
+
 ├── staticData
+
 │   └── todos.staticdata.php
+
 ├── bootstrap.php
+
 ├── router.php
+
 ├── index.php
+
 ├── composer.json
+
 ├── composer.lock
+
 └── readme.md
