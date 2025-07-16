@@ -1,5 +1,4 @@
 .dashboard-container {
-    /* ...existing code... */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -11,20 +10,16 @@
     margin-right: auto;
 }
 .dashboard-title {
-    /* ...existing code... */
     text-align: center;
 }
 .task-overview h2, .task-details h2 {
-    /* ...existing code... */
     text-align: center;
 }
 .task-table {
-    /* ...existing code... */
     margin-left: auto;
     margin-right: auto;
 }
 .task-detail-block h3 {
-    /* ...existing code... */
     text-align: left;
     margin-top: 0;
 }
@@ -38,11 +33,9 @@
     color: #8338ec;
 }
 .deliverables h4, .notes h4 {
-    /* ...existing code... */
     text-align: left;
 }
 .deliverables ul, .notes ul {
-    /* ...existing code... */
     margin-bottom: 0;
 }
 body {
