@@ -5,7 +5,7 @@
 
 <div align="center">
   <a href="https://github.com/tanjeffersonnn">
-    <img src="../assets/img/nyebe_white.png" alt="Logo" width="130" height="100">
+    <img src="assets/img/nyebe_white.png" alt="Logo" width="130" height="100">
   </a>
   <h3 align="center">AD-Task-1</h3>
 </div>
