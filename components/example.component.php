@@ -4,6 +4,7 @@
 
 <div class="dashboard-container">
     <header class="dashboard-header">
+        <img src="/AD-Task-1-main/assets/img/nyebe_white.png" alt="Logo" width="130" height="100" style="margin-bottom: 10px;">
         <h1 class="dashboard-title">To-do List</h1>
     </header>
     <section class="task-overview">
